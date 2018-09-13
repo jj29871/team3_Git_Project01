@@ -17,7 +17,7 @@ public class DeptController {
 	@Autowired
 	private DeptService deptService;
 
-	/********************* ���� Start (Select����) **********************/
+	/********************* 재훈 Start (Select관련) **********************/
 	@RequestMapping("index.htm")
 	public String deptlist(Model model) throws SQLException {
 
@@ -33,7 +33,7 @@ public class DeptController {
 		return "home.deptList";
 	}
 
-	/********************* ���� End (Select����) **********************/
+	/********************* 재훈 End (Select관련) **********************/
 
 	// 정원 excel, pdf controller
 	@RequestMapping("noticeExcel.htm")

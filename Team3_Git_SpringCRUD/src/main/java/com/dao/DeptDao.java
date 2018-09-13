@@ -6,11 +6,11 @@ import com.dto.DeptDto;
 
 public interface DeptDao {
 
-	/*************** ���� Start **************/
+	/*************** 재훈 Start **************/
 
 	List<DeptDto> getDeptList(); // ��ü��ȸ
 
-	/**************** ���� End ***************/
+	/**************** 재훈 End ***************/
 
 	// 정원 게시물 엑셀출력, pdf출력
 	List<DeptDto> getDownload();

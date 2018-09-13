@@ -16,7 +16,7 @@ public class DeptService {
 	@Autowired
 	private SqlSession sqlsession;
 
-	/******************** ���� start (select����) ***********************/
+	/******************** 재훈 start (select관련) ***********************/
 
 	public List<DeptDto> getDeptList() {
 		DeptDao deptdao = sqlsession.getMapper(DeptDao.class);
@@ -24,7 +24,7 @@ public class DeptService {
 		return list;
 	}
 
-	/******************** ���� end (select����) ***********************/
+	/******************** 재훈 end (select관련) ***********************/
 
 	// 정원 excel, pdf service
 
