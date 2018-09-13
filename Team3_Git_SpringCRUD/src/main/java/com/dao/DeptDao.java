@@ -5,10 +5,14 @@ import java.util.List;
 import com.dto.DeptDto;
 
 public interface DeptDao {
-	
-	/***************ÀçÈÆ Start**************/
-	
-	List<DeptDto> getDeptList(); //ÀüÃ¼Á¶È¸
-	
-	/****************ÀçÈÆ End***************/
+
+	/*************** ï¿½ï¿½ï¿½ï¿½ Start **************/
+
+	List<DeptDto> getDeptList(); // ï¿½ï¿½Ã¼ï¿½ï¿½È¸
+
+	/**************** ï¿½ï¿½ï¿½ï¿½ End ***************/
+
+	// ì •ì› ê²Œì‹œë¬¼ ì—‘ì…€ì¶œë ¥, pdfì¶œë ¥
+	List<DeptDto> getDownload();
+
 }

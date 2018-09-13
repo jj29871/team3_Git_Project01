@@ -17,8 +17,7 @@ public class DeptController {
 	@Autowired
 	private DeptService deptService;
 
-	
-/*********************ÀçÈÆ Start (Select°ü·Ã)**********************/
+	/********************* ï¿½ï¿½ï¿½ï¿½ Start (Selectï¿½ï¿½ï¿½ï¿½) **********************/
 	@RequestMapping("index.htm")
 	public String deptlist(Model model) throws SQLException {
 
@@ -33,7 +32,28 @@ public class DeptController {
 		model.addAttribute("list", list);
 		return "home.deptList";
 	}
-/*********************ÀçÈÆ End (Select°ü·Ã)**********************/
-	
-	
+
+	/********************* ï¿½ï¿½ï¿½ï¿½ End (Selectï¿½ï¿½ï¿½ï¿½) **********************/
+
+	// ì •ì› excel, pdf controller
+	@RequestMapping("noticeExcel.htm")
+	public String noticeExcel(Model model) throws ClassNotFoundException, SQLException {
+
+		List<DeptDto> list = deptService.noticeExcel();
+
+		model.addAttribute("noticeList", list);
+
+		return "noticeListExcel";
+	}
+
+	@RequestMapping("noticePdf.htm")
+	public String pageRankReport(Model model) throws ClassNotFoundException, SQLException {
+
+		List<DeptDto> list = deptService.noticePdf();
+
+		model.addAttribute("noticeList", list);
+
+		return "noticeListPdf";
+	}
+
 }

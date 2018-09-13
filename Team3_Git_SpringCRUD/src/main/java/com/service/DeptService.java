@@ -1,5 +1,6 @@
 package com.service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -14,15 +15,33 @@ public class DeptService {
 
 	@Autowired
 	private SqlSession sqlsession;
-	
-/********************ÀçÈÆ start (select°ü·Ã)***********************/
-	
-	public List<DeptDto> getDeptList(){		
-		DeptDao deptdao=  sqlsession.getMapper(DeptDao.class);
+
+	/******************** ï¿½ï¿½ï¿½ï¿½ start (selectï¿½ï¿½ï¿½ï¿½) ***********************/
+
+	public List<DeptDto> getDeptList() {
+		DeptDao deptdao = sqlsession.getMapper(DeptDao.class);
 		List<DeptDto> list = deptdao.getDeptList();
 		return list;
 	}
-	
-/********************ÀçÈÆ end (select°ü·Ã)***********************/
-	
+
+	/******************** ï¿½ï¿½ï¿½ï¿½ end (selectï¿½ï¿½ï¿½ï¿½) ***********************/
+
+	// ì •ì› excel, pdf service
+
+	// ê²Œì‹œíŒ ì—‘ì…€
+	public List<DeptDto> noticeExcel() throws ClassNotFoundException, SQLException {
+		DeptDao noticedao = sqlsession.getMapper(DeptDao.class);
+		List<DeptDto> list = noticedao.getDownload();
+
+		return list;
+	}
+
+	// ê²Œì‹œíŒ pdf
+	public List<DeptDto> noticePdf() throws ClassNotFoundException, SQLException {
+		DeptDao noticedao = sqlsession.getMapper(DeptDao.class);
+		List<DeptDto> list = noticedao.getDownload();
+
+		return list;
+	}
+
 }

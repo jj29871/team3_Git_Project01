@@ -6,12 +6,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.dao.DeptDao">
 
-<!-- ********** 재훈start getDeptList(전체조회) *********** -->
+	<!-- ********** 재훈start getDeptList(전체조회) *********** -->
 
-<select parameterType="hashmap" id="getDeptList" resultType="com.dto.DeptDto">
-select deptno,dname,loc from dept 
-</select>
+	<select parameterType="hashmap" id="getDeptList"
+		resultType="com.dto.DeptDto">
+		select deptno,dname,loc from dept
+	</select>
 
-<!-- ********************** 재훈 end ********************* -->
+	<!-- ********************** 재훈 end ********************* -->
+
+	<!-- 정원 excel,pdf dao -->
+
+	<select id="getDownload" resultType="com.dto.DeptDto">
+		SELECT deptno,dname,loc FROM dept
+	</select>
+
+
+
+
 
 </mapper>
