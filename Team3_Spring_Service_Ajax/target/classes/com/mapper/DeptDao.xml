@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.dao.DeptDao">
+
+ <!-- insertDept(dept 삽입) -->
+ <insert id="insertDept" parameterType="com.dto.DeptDto">
+    insert into dept(deptno,dname,loc)
+      values(#{deptno}, #{dname}, #{loc})
+ </insert>
+ 
+ <!-- update(dept 수정)  -->
+ <update id="update" parameterType="com.dto.DeptDto">
+ UPDATE DEPT SET DNAME=#{dname}, LOC=#{loc} WHERE DEPTNO=#{deptno}
+ </update>
+ 
+ <!-- delete(dept 삭제) -->
+ <delete id="delete" parameterType="com.dto.DeptDto">
+  DELETE from dept WHERE deptno=#{deptno}
+ </delete>
+ 
+ <!-- getDeptList(전체조회) -->
+ <select id="getDeptList" parameterType="hashmap" 
+                           resultType="com.dto.DeptDto">
+                        
+       select deptno,dname,loc from dept
+ </select>
+
+  <!-- 검색 -->
+  <select id="deptnoCheck" parameterType="Integer" resultType="com.dto.DeptDto">
+ 	select deptno, dname, loc from dept where deptno = #{deptno}
+ </select>
+<!--  
+
+collection = 전달받은 인자값
+
+item   = 전달받은 인자값을 다른이름으로 대체 
+
+open 해당 구문이 시작할떄 (
+
+close 해당구문이 끝날떄
+
+separator  한번 이상 반복할때 반복되는 사이에  해당 문을 넣어줌
+
+
+note: "collection"파라미터 객체로 MyBatis 에 List 인스턴스나 배열을 전달 할 수 있다. 그렇게 하면 MyBatis는 Map으로
+      자동으로 감싸고 이름을 키로 사용한다. List 인스턴스는 'LIST' 를 키로 사용하고, 배열 인스턴스는 'array'
+      를 키로 사용한다.
+
+-->
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.or.com.model.DeptDao">
+ <select id="getDeptList" parameterType="kr.or.com.model.DeptDto" resultType="kr.or.com.model.DeptDto">
+	select * from dept
+</select>
+</mapper>  -->
+
+
+
+</mapper>
