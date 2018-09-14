@@ -6,9 +6,13 @@ import com.dto.DeptDto;
 
 public interface DeptDao {
 	
-	/***************ÀçÈÆ Start**************/
+	/***************ï¿½ï¿½ï¿½ï¿½ Start**************/
 	
-	List<DeptDto> getDeptList(); //ÀüÃ¼Á¶È¸
+	List<DeptDto> getDeptList(); //ï¿½ï¿½Ã¼ï¿½ï¿½È¸
 	
-	/****************ÀçÈÆ End***************/
+	/****************ï¿½ï¿½ï¿½ï¿½ End***************/
+	
+	/**********íšŒì¤€ start**********/
+	int insertDept(DeptDto dto);
+	/**********íšŒì¤€ end**********/
 }

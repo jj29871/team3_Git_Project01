@@ -15,7 +15,7 @@ public class DeptService {
 	@Autowired
 	private SqlSession sqlsession;
 	
-/********************ÀçÈÆ start (select°ü·Ã)***********************/
+/********************ï¿½ï¿½ï¿½ï¿½ start (selectï¿½ï¿½ï¿½ï¿½)***********************/
 	
 	public List<DeptDto> getDeptList(){		
 		DeptDao deptdao=  sqlsession.getMapper(DeptDao.class);
@@ -23,6 +23,14 @@ public class DeptService {
 		return list;
 	}
 	
-/********************ÀçÈÆ end (select°ü·Ã)***********************/
+/********************ï¿½ï¿½ï¿½ï¿½ end (selectï¿½ï¿½ï¿½ï¿½)***********************/
+	
+/**********íšŒì¤€ start**********/
+	public int insertDept(DeptDto dto) {
+		DeptDao deptdao=  sqlsession.getMapper(DeptDao.class);
+		int result = deptdao.insertDept(dto);
+		return result;
+	}
+/**********íšŒì¤€ end**********/
 	
 }
