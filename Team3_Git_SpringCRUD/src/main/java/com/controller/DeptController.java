@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dto.DeptDto;
 import com.service.DeptService;
@@ -55,5 +56,19 @@ public class DeptController {
 
 		return "noticeListPdf";
 	}
+/**********회준 start**********/
+	@RequestMapping(value = "deptInsert.htm", method = RequestMethod.GET)
+	public String deptinsert() {
+
+		return "crud.deptInsert";
+	}
+
+	@RequestMapping(value = "deptInsert.htm", method = RequestMethod.POST)
+	public String insert(DeptDto dto) {
+
+		deptService.insertDept(dto);
+		return "redirect:index.htm";
+	}	
+/**********회준 end**********/
 
 }
