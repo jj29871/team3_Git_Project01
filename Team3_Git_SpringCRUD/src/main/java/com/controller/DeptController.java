@@ -81,6 +81,14 @@ public class DeptController {
 		return "redirect:index.htm";
 
 	}
-	/**********현이 end**********/
+/**********현이 end**********/
+	
+/***********한결 start*************/
+	@RequestMapping(value = "deptUpdateForm.htm", method = RequestMethod.GET)
+	public String deptupdateForm() {
+
+		return "crud.deptUpdate";
+	}
+/***********한결 end*************/
 	
 }
