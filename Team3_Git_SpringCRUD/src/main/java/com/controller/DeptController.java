@@ -87,8 +87,9 @@ public class DeptController {
 	@RequestMapping(value = "deptUpdateForm.htm", method = RequestMethod.GET)
 	public String deptupdateForm() {
 
-		return "crud.deptUpdate";
+		return "crud.deptUpdated";
 	}
+	
 /***********한결 end*************/
 	
 }
