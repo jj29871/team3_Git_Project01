@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dto.DeptDto;
 import com.service.DeptService;
@@ -56,4 +57,18 @@ public class DeptController {
 		return "noticeListPdf";
 	}
 
+	/********************* 영준 Start (Update관련) **********************/
+	@RequestMapping(value = "deptUpdateForm.htm", method = RequestMethod.GET)
+	public String deptupdateForm() {
+
+		return "crud.deptUpdate";
+	}
+
+	@RequestMapping(value = "deptUpdate.htm", method = RequestMethod.POST)
+	public String deptupdate(DeptDto dto) throws ClassNotFoundException, SQLException {
+
+		deptService.update(dto);
+		return "redirect:index.htm";
+	}
+	/********************* 영준 End (Update관련) **********************/
 }

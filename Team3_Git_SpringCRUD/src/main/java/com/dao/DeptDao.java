@@ -15,4 +15,7 @@ public interface DeptDao {
 	// 정원 게시물 엑셀출력, pdf출력
 	List<DeptDto> getDownload();
 
+	/************영준 start ************/
+	int update(DeptDto dto);
+	/************영준 end ************/
 }
