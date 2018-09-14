@@ -40,6 +40,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  <delete id="delete" parameterType="com.dto.DeptDto">
   DELETE from dept WHERE deptno=#{deptno}
  </delete>
+ 
+ 
 <!--  /*************민지 end**********/--> 
 
 
