@@ -36,7 +36,8 @@ public class DeptController {
 
 	/********************* 재훈 End (Select관련) **********************/
 
-	// 정원 excel, pdf controller
+	/*********************정원 excel, pdf controller*****************/
+	
 	@RequestMapping("noticeExcel.htm")
 	public String noticeExcel(Model model) throws ClassNotFoundException, SQLException {
 
@@ -56,6 +57,7 @@ public class DeptController {
 
 		return "noticeListPdf";
 	}
+	
 /**********회준 start**********/
 	@RequestMapping(value = "deptInsert.htm", method = RequestMethod.GET)
 	public String deptinsert() {
@@ -70,5 +72,4 @@ public class DeptController {
 		return "redirect:index.htm";
 	}	
 /**********회준 end**********/
-
 }
