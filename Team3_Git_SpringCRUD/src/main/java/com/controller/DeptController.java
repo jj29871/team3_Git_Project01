@@ -57,4 +57,16 @@ public class DeptController {
 		return "noticeListPdf";
 	}
 	/***************************************************************/
+	
+	/**********현이 start**********/
+	@RequestMapping(value = "deptDelete.htm")
+	public String deptdelete(DeptDto dto) {
+
+		deptService.delete(dto);
+		return "redirect:index.htm";
+
+	}
+	/**********현이 end**********/
+	
+	
 }

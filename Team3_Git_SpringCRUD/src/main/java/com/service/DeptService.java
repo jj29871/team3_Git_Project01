@@ -54,4 +54,13 @@ public class DeptService {
 	}
 /**********회준 end**********/
 	
+	/**********현이 start**********/
+	public int delete(DeptDto dto) {
+		DeptDao deptdao=  sqlsession.getMapper(DeptDao.class);
+		deptdao.delete(dto);
+		return 0;
+	}
+	/**********현이 end**********/
+	
+	
 }
