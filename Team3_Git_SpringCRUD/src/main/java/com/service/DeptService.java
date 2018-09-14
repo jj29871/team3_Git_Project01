@@ -26,7 +26,7 @@ public class DeptService {
 
 	/******************** 재훈 end (select관련) ***********************/
 
-	// 정원 excel, pdf service
+	/******************** 정원 excel, pdf service *******************/
 
 	// 게시판 엑셀
 	public List<DeptDto> noticeExcel() throws ClassNotFoundException, SQLException {
@@ -43,5 +43,15 @@ public class DeptService {
 
 		return list;
 	}
+	/*************************************************************/
 
+
+/**********회준 start**********/
+	public int insertDept(DeptDto dto) {
+		DeptDao deptdao=  sqlsession.getMapper(DeptDao.class);
+		int result = deptdao.insertDept(dto);
+		return result;
+	}
+/**********회준 end**********/
+	
 }

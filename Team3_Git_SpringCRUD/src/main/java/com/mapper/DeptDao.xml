@@ -15,14 +15,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<!-- ********************** 재훈 end ********************* -->
 
-	<!-- 정원 excel,pdf dao -->
+	<!-- **********************정원 excel,pdf dao *************-->
 
 	<select id="getDownload" resultType="com.dto.DeptDto">
 		SELECT deptno,dname,loc FROM dept
 	</select>
 
+	<!-- ****************************************************** -->
 
 
 
 
+<!-- /**********회준 start**********/ -->
+ <!-- insertDept(dept 삽입) -->
+ <insert id="insertDept" parameterType="com.dto.DeptDto">
+    insert into dept(deptno,dname,loc)
+      values(#{deptno}, #{dname}, #{loc})
+ </insert>
+<!-- /**********회준 end**********/ -->
 </mapper>
