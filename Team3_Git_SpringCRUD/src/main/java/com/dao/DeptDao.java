@@ -22,5 +22,11 @@ public interface DeptDao {
 	/**********회준 start**********/
 	int insertDept(DeptDto dto);
 	/**********회준 end**********/
+	
+	/**********민지 start***********/
+	int delete(DeptDto dto);
+	/**********민지 end***********/
+	
+	
 
 }

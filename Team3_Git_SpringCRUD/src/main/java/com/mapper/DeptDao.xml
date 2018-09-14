@@ -33,4 +33,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
       values(#{deptno}, #{dname}, #{loc})
  </insert>
 <!-- /**********회준 end**********/ -->
+
+
+<!--  /*************민지 start**********/--> 
+ <!-- delete(dept 삭제) -->
+ <delete id="delete" parameterType="com.dto.DeptDto">
+  DELETE from dept WHERE deptno=#{deptno}
+ </delete>
+<!--  /*************민지 end**********/--> 
+
+
 </mapper>
