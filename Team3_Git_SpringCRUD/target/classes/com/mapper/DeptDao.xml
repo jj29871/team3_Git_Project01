@@ -15,13 +15,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<!-- ********************** 재훈 end ********************* -->
 
-	<!-- 정원 excel,pdf dao -->
+	<!-- **********************정원 excel,pdf dao *************-->
 
 	<select id="getDownload" resultType="com.dto.DeptDto">
 		SELECT deptno,dname,loc FROM dept
 	</select>
 
-
+	<!-- ****************************************************** -->
 
 
 

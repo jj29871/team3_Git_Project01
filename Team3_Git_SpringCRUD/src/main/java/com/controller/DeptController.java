@@ -35,7 +35,8 @@ public class DeptController {
 
 	/********************* 재훈 End (Select관련) **********************/
 
-	// 정원 excel, pdf controller
+	/*********************정원 excel, pdf controller*****************/
+	
 	@RequestMapping("noticeExcel.htm")
 	public String noticeExcel(Model model) throws ClassNotFoundException, SQLException {
 
@@ -55,5 +56,5 @@ public class DeptController {
 
 		return "noticeListPdf";
 	}
-
+	/***************************************************************/
 }
