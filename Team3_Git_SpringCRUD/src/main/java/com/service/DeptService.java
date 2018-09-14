@@ -44,4 +44,13 @@ public class DeptService {
 		return list;
 	}
 
+
+/**********회준 start**********/
+	public int insertDept(DeptDto dto) {
+		DeptDao deptdao=  sqlsession.getMapper(DeptDao.class);
+		int result = deptdao.insertDept(dto);
+		return result;
+	}
+/**********회준 end**********/
+	
 }

@@ -25,4 +25,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 
 
+
+<!-- /**********회준 start**********/ -->
+ <!-- insertDept(dept 삽입) -->
+ <insert id="insertDept" parameterType="com.dto.DeptDto">
+    insert into dept(deptno,dname,loc)
+      values(#{deptno}, #{dname}, #{loc})
+ </insert>
+<!-- /**********회준 end**********/ -->
 </mapper>
