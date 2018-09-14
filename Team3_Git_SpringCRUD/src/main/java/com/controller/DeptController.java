@@ -57,7 +57,6 @@ public class DeptController {
 
 		return "noticeListPdf";
 	}
-	
 /**********회준 start**********/
 	@RequestMapping(value = "deptInsert.htm", method = RequestMethod.GET)
 	public String deptinsert() {
@@ -72,4 +71,16 @@ public class DeptController {
 		return "redirect:index.htm";
 	}	
 /**********회준 end**********/
+	
+	
+/**********현이 start**********/
+	@RequestMapping(value = "deptDelete.htm")
+	public String deptdelete(DeptDto dto) {
+
+		deptService.delete(dto);
+		return "redirect:index.htm";
+
+	}
+	/**********현이 end**********/
+	
 }
