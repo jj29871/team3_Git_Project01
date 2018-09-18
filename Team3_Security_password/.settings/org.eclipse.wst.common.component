@@ -4,6 +4,6 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="java-output-path" value="/SpringMVC_Basic_02/build/classes"/>
-        <property name="context-root" value="SpringMVC_Basic02_WebSite_Mybatis_Security_password"/>
+        <property name="context-root" value="SpringMVC"/>
     </wb-module>
 </project-modules>
